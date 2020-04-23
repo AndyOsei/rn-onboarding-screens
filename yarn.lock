@@ -1171,6 +1171,11 @@
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
 
+"@twotalltotems/react-native-otp-input@^1.3.5":
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/@twotalltotems/react-native-otp-input/-/react-native-otp-input-1.3.5.tgz#bf0ae7a6b8819d213c563225adf405f153ac8e0b"
+  integrity sha512-zI3Avmvql94VrNbdA+x7bXcXfVVxXlGxAav3rYdpDaQs5UJx/ArpN7YZ2KuaF88HO//T4Wp1rAYse6Z8Azv7bQ==
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -4399,7 +4404,7 @@ react-native-reanimated@~1.7.0:
   dependencies:
     fbjs "^1.0.0"
 
-react-native-safe-area-context@0.7.3:
+react-native-safe-area-context@^0.7.3:
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-0.7.3.tgz#ad6bd4abbabe195332c53810e4ce5851eb21aa2a"
   integrity sha512-9Uqu1vlXPi+2cKW/CW6OnHxA76mWC4kF3wvlqzq4DY8hn37AeiXtLFs2WkxH4yXQRrnJdP6ivc65Lz+MqwRZAA==

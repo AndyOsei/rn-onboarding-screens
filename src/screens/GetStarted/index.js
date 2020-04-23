@@ -8,34 +8,38 @@ import {
 import Pager from "./Pager";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default () => (
-  <SafeAreaView style={{ flex: 1 }}>
-    <View style={styles.container}>
-      <TopImageBackground />
-      <Background />
-      <View style={styles.getStartedContainer}>
-        <View style={styles.imageContainer}>
-          <GetStartedImage />
-        </View>
-        <View style={styles.textContainer}>
-          <Pager />
-        </View>
-        <View style={styles.buttonsContainer}>
-          <TouchableOpacity style={styles.touchable}>
-            <Text style={styles.touchableText}>Create Account</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.touchable, { backgroundColor: "white" }]}
-          >
-            <Text style={[styles.touchableText, { color: "#4F44FF" }]}>
-              Login
-            </Text>
-          </TouchableOpacity>
+export default ({ navigation }) => {
+  const createAccount = () => navigation.navigate("Registration");
+
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <TopImageBackground />
+        <Background />
+        <View style={styles.getStartedContainer}>
+          <View style={styles.imageContainer}>
+            <GetStartedImage />
+          </View>
+          <View style={styles.textContainer}>
+            <Pager />
+          </View>
+          <View style={styles.buttonsContainer}>
+            <TouchableOpacity style={styles.touchable} onPress={createAccount}>
+              <Text style={styles.touchableText}>Create Account</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.touchable, { backgroundColor: "white" }]}
+            >
+              <Text style={[styles.touchableText, { color: "#4F44FF" }]}>
+                Login
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-    </View>
-  </SafeAreaView>
-);
+    </SafeAreaView>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -67,6 +71,7 @@ const styles = StyleSheet.create({
     marginVertical: 15,
   },
   touchableText: {
+    fontFamily: "Gotham-Medium",
     fontSize: 15,
     color: "white",
   },
