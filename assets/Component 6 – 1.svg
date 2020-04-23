@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="812" viewBox="0 0 375 812">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="375" height="812" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eeedf5" stop-opacity="0.71"/>
+      <stop offset="0.59" stop-color="#f0eff6" stop-opacity="0.749"/>
+      <stop offset="0.727" stop-color="#f6f6f9"/>
+      <stop offset="0.811" stop-color="#fcfcfd"/>
+      <stop offset="0.886" stop-color="#fefefe"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Component_6_1" data-name="Component 6 – 1" clip-path="url(#clip-path)">
+    <rect id="Rectangle_76" data-name="Rectangle 76" width="375" height="812" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
