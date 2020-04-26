@@ -46,11 +46,7 @@ export default ({ navigation }) => {
             <View style={styles.card}>
               <View style={styles.inputContainer}>
                 <Image source={Icons.flag} />
-                <TextInput
-                  style={styles.input}
-                  textAlign="center"
-                  value="+ (1) 555 678 2810"
-                />
+                <TextInput style={styles.input} textAlign="center" />
                 <Tick />
               </View>
               <TouchableOpacity
