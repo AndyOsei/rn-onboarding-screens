@@ -6,4 +6,5 @@ export { default as RegistrationImage } from "./RegistrationImage";
 export { default as VerificationImage } from "./VerificationImage";
 export { default as ShieldImage } from "./ShieldImage";
 export { default as Fingerprint } from "./Fingerprint";
+export { default as IdentityImage } from "./IdentityImage";
 export { default as Tick } from "./icons/Tick";

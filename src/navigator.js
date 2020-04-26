@@ -5,6 +5,7 @@ import RegistrationScreen from "./screens/Registration";
 import VerificationScreen from "./screens/Verification";
 import FingerprintScreen from "./screens/Fingerprint";
 import IdentityScreen from "./screens/Identity";
+import WelcomeScreen from "./screens/Welcome";
 
 const Stack = createStackNavigator();
 
@@ -15,5 +16,6 @@ export default () => (
     <Stack.Screen name="Verification" component={VerificationScreen} />
     <Stack.Screen name="Fingerprint" component={FingerprintScreen} />
     <Stack.Screen name="Identity" component={IdentityScreen} />
+    <Stack.Screen name="Welcome" component={WelcomeScreen} />
   </Stack.Navigator>
 );
