@@ -39,10 +39,18 @@ export default ({ navigation }) => {
           <View style={styles.fingerprintContainer}>
             <Fingerprint />
           </View>
-          <TouchableOpacity style={styles.touchable} onPress={next}>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            style={styles.touchable}
+            onPress={next}
+          >
             <Text style={styles.touchableText}>continue</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.skipTouchable} onPress={next}>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            style={styles.skipTouchable}
+            onPress={next}
+          >
             <Text style={styles.skipText}>Skip This Step</Text>
             <Image source={Icons.arrowForward} />
           </TouchableOpacity>

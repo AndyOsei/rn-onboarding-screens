@@ -25,10 +25,15 @@ export default ({ navigation }) => {
           <Pager />
         </View>
         <View style={styles.buttonsContainer}>
-          <TouchableOpacity style={styles.touchable} onPress={createAccount}>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            style={styles.touchable}
+            onPress={createAccount}
+          >
             <Text style={styles.touchableText}>Create Account</Text>
           </TouchableOpacity>
           <TouchableOpacity
+            activeOpacity={0.8}
             style={[styles.touchable, { backgroundColor: "white" }]}
           >
             <Text style={[styles.touchableText, { color: "#4F44FF" }]}>

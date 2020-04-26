@@ -57,7 +57,11 @@ export default ({ navigation }) => {
               </Text>
             </View>
           </View>
-          <TouchableOpacity style={styles.touchable} onPress={next}>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            style={styles.touchable}
+            onPress={next}
+          >
             <Text style={styles.touchableText}>continue</Text>
           </TouchableOpacity>
         </View>

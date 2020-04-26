@@ -54,7 +54,11 @@ export default ({ navigation }) => {
                   <Tick />
                 </View>
               </View>
-              <TouchableOpacity style={styles.touchable} onPress={verify}>
+              <TouchableOpacity
+                activeOpacity={0.8}
+                style={styles.touchable}
+                onPress={verify}
+              >
                 <Text style={styles.touchableText}>Verify</Text>
               </TouchableOpacity>
             </View>

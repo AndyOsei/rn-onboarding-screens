@@ -24,8 +24,11 @@ const circleConfig = {
 };
 
 const Circle = ({ i, onPress }) => {
+  const [activeIndex] = usePager();
+  const color = activeIndex === i ? "#6C63FF" : "#707070";
   return (
     <TouchableOpacity
+      activeOpacity={0.8}
       onPress={() => onPress(i)}
       style={styles.touchableCircleStyle}
     >
@@ -33,7 +36,7 @@ const Circle = ({ i, onPress }) => {
         style={[
           styles.circle,
           {
-            backgroundColor: colors[i % colors.length],
+            backgroundColor: color,
           },
         ]}
       />
@@ -119,6 +122,7 @@ const styles = StyleSheet.create({
     width: 10,
     height: 10,
     borderRadius: 5,
+    backgroundColor: "#707070",
   },
   letsGetStartedTextStyle: {
     fontFamily: "Gotham-Bold",
