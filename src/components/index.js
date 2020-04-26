@@ -3,5 +3,7 @@ export { default as TopImageBackground } from "./TopImageBackground";
 export { default as Background } from "./Background";
 export { default as GetStartedImage } from "./GetStartedImage";
 export { default as RegistrationImage } from "./RegistrationImage";
-export { default as FingerprintImage } from "./FingerprintImage";
+export { default as VerificationImage } from "./VerificationImage";
+export { default as ShieldImage } from "./ShieldImage";
+export { default as Fingerprint } from "./Fingerprint";
 export { default as Tick } from "./icons/Tick";

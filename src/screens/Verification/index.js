@@ -1,20 +1,13 @@
 import * as React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  TextInput,
-  Image,
-  Dimensions,
-} from "react-native";
+import { View, Text, StyleSheet, Dimensions } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useSafeArea } from "react-native-safe-area-context";
 import OTPInputView from "@twotalltotems/react-native-otp-input";
+import CountDown from "react-native-countdown-component";
 import {
   Background,
   TopImageBackground,
-  FingerprintImage,
+  VerificationImage,
   Tick,
 } from "../../components";
 
@@ -23,6 +16,7 @@ const { width, height } = Dimensions.get("window");
 export default ({ navigation }) => {
   const [code, setCode] = React.useState("");
   const insets = useSafeArea();
+
   const verify = () => navigation.navigate("Fingerprint");
 
   return (
@@ -31,7 +25,7 @@ export default ({ navigation }) => {
       <Background />
       <View style={styles.registrationContainer}>
         <View style={styles.imageContainer}>
-          <FingerprintImage />
+          <VerificationImage />
         </View>
         <View style={{ flex: 1 }}>
           <View style={styles.textContainer}>
@@ -64,7 +58,21 @@ export default ({ navigation }) => {
                 <Text style={styles.touchableText}>Verify</Text>
               </TouchableOpacity>
             </View>
-            <Text style={styles.resendCodeText}>Re-Send code in 0:59</Text>
+            <View style={styles.timerContainer}>
+              <Text style={styles.resendCodeText}>Re-Send Code In </Text>
+              <CountDown
+                showSeparator
+                until={60}
+                size={15}
+                onFinish={() => {}}
+                digitStyle={styles.digitStyle}
+                separatorStyle={{ color: "#4F44FF" }}
+                digitTxtStyle={{ color: "#4F44FF" }}
+                timeToShow={["M", "S"]}
+                timeLabels={{ m: null, s: null }}
+                style={{ marginTop: 15 }}
+              />
+            </View>
           </View>
         </View>
       </View>
@@ -169,5 +177,14 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontFamily: "Gotham-Medium",
     fontSize: 15,
+  },
+  digitStyle: {
+    backgroundColor: "transparent",
+    width: 20,
+    height: 20,
+  },
+  timerContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
   },
 });

@@ -7,37 +7,37 @@ import {
 } from "../../components";
 import Pager from "./Pager";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { useSafeArea } from "react-native-safe-area-context";
 
 export default ({ navigation }) => {
+  const insets = useSafeArea();
   const createAccount = () => navigation.navigate("Registration");
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={styles.container}>
-        <TopImageBackground />
-        <Background />
-        <View style={styles.getStartedContainer}>
-          <View style={styles.imageContainer}>
-            <GetStartedImage />
-          </View>
-          <View style={styles.textContainer}>
-            <Pager />
-          </View>
-          <View style={styles.buttonsContainer}>
-            <TouchableOpacity style={styles.touchable} onPress={createAccount}>
-              <Text style={styles.touchableText}>Create Account</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[styles.touchable, { backgroundColor: "white" }]}
-            >
-              <Text style={[styles.touchableText, { color: "#4F44FF" }]}>
-                Login
-              </Text>
-            </TouchableOpacity>
-          </View>
+    <View style={[styles.container, { paddingTop: insets.top }]}>
+      <TopImageBackground />
+      <Background />
+      <View style={styles.getStartedContainer}>
+        <View style={styles.imageContainer}>
+          <GetStartedImage />
+        </View>
+        <View style={styles.textContainer}>
+          <Pager />
+        </View>
+        <View style={styles.buttonsContainer}>
+          <TouchableOpacity style={styles.touchable} onPress={createAccount}>
+            <Text style={styles.touchableText}>Create Account</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.touchable, { backgroundColor: "white" }]}
+          >
+            <Text style={[styles.touchableText, { color: "#4F44FF" }]}>
+              Login
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    paddingTop: 30,
   },
   textContainer: {
     flex: 1,
