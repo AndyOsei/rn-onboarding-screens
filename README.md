@@ -1,4 +1,4 @@
-## React Native Onboarding Screens
+# React Native Onboarding Screens
 
 Beautifully crafted onboarding screens in react native for building amazing onboarding experiences in your own app.
 Who wants to kickstart their app with beautiful onboarding screens...?
@@ -6,6 +6,14 @@ Who wants to kickstart their app with beautiful onboarding screens...?
 Find actual designs at (https://www.behance.net/gallery/87302761/Onboarding-Screens-Free?tracking_source=search_projects_recommended%7COnboarding%20screens%20free)
 
 For the Flutter Version...kindly go to https://github.com/david-legend/onboarding-app
+
+## Setup
+
+```shell
+    cd rn-onboarding-screens
+    yarn install
+    expo start
+```
 
 ### OnBoarding Initial Screens
 ![Screenshot](assets/screenshots/onboard_1.png)
