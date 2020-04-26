@@ -21,7 +21,7 @@ export default ({ navigation }) => {
     <View style={[styles.container, { paddingTop: insets.top }]}>
       <TopImageBackground />
       <Background />
-      <View style={styles.registrationContainer}>
+      <View style={styles.content}>
         <View style={styles.imageContainer}>
           <ShieldImage />
         </View>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#eeedf5",
   },
-  registrationContainer: {
+  content: {
     ...StyleSheet.absoluteFillObject,
   },
   imageContainer: {

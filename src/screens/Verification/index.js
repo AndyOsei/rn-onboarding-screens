@@ -23,7 +23,7 @@ export default ({ navigation }) => {
     <View style={[styles.container, { paddingTop: insets.top }]}>
       <TopImageBackground />
       <Background />
-      <View style={styles.registrationContainer}>
+      <View style={styles.verificationContainer}>
         <View style={styles.imageContainer}>
           <VerificationImage />
         </View>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#eeedf5",
   },
-  registrationContainer: {
+  verificationContainer: {
     ...StyleSheet.absoluteFillObject,
   },
   imageContainer: {
@@ -97,10 +97,6 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     marginTop: 30,
-  },
-  codeContainer: {
-    flex: 1,
-    alignItems: "center",
   },
   instructionsText: {
     fontFamily: "Gotham-Light",
@@ -135,11 +131,6 @@ const styles = StyleSheet.create({
     padding: 10,
     height: 50,
     marginBottom: 15,
-  },
-  input: {
-    flex: 1,
-    margin: 3,
-    color: "#4F44FF",
   },
   card: {
     shadowColor: "#0000001C",

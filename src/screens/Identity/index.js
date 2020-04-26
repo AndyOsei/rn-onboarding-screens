@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
+import { View, Text, StyleSheet, Dimensions } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useSafeArea } from "react-native-safe-area-context";
 import {
@@ -7,7 +7,6 @@ import {
   TopImageBackground,
   IdentityImage,
 } from "../../components";
-import { Icons } from "../../constants";
 
 const { width, height } = Dimensions.get("window");
 
@@ -26,7 +25,7 @@ export default ({ navigation }) => {
         </View>
         <View style={{ flex: 1 }}>
           <View style={styles.textContainer}>
-            <Text style={styles.fingerprintText}>Identity</Text>
+            <Text style={styles.identityText}>Identity</Text>
             <Text style={styles.instructionsText}>
               We Need to verify your identity
             </Text>
@@ -95,7 +94,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     alignSelf: "center",
   },
-  fingerprintText: {
+  identityText: {
     fontFamily: "Gotham-Bold",
     fontSize: 27,
     alignSelf: "center",
